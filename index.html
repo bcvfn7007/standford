@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stanford School — Курсы английского языка | Better future starts here</title>
+  <meta name="description" content="Современный учебный центр английского языка Stanford School. Подготовка к IELTS, General English, Business English, разговорные клубы и индивидуальные программы.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%237C1FA0%22/><text y=%2265%22 x=%2228%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2250%22>S</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cinematic Preloader Curtain -->
+  <div id="loader" class="preloader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.8" stroke-opacity="0.3" />
+          <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="1.0" stroke-opacity="0.2" />
+          <g transform="translate(0, -2)">
+            <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+        </svg>
+      </div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Nav Bar -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo-link" id="nav-logo">
+        <div class="logo-monogram-small">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.8" stroke-opacity="0.3" />
+            <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="1.0" stroke-opacity="0.2" />
+            <g transform="translate(0, -2)">
+              <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+          </svg>
+        </div>
+        <span class="logo-text">Stanford<span class="text-accent">School</span></span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#courses" class="nav-url" data-i18n="nav_courses">Курсы</a>
+        <a href="#results" class="nav-url" data-i18n="nav_results">Результаты</a>
+        <a href="#teachers" class="nav-url" data-i18n="nav_teachers">Преподаватели</a>
+        <a href="#reviews" class="nav-url" data-i18n="nav_reviews">Отзывы</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Desktop Language Switcher -->
+        <div class="lang-switcher">
+          <button data-lang="ru" class="lang-btn active">RU</button>
+          <button data-lang="en" class="lang-btn">EN</button>
+          <button data-lang="uz" class="lang-btn">UZ</button>
+        </div>
+        <a href="#cta" class="btn btn-nav" data-i18n="nav_cta">Записаться</a>
+        <button class="mobile-menu-toggle" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay">
+    <nav class="mobile-nav-links">
+      <!-- Mobile Language Switcher -->
+      <div class="mobile-lang-switcher">
+        <button data-lang="ru" class="lang-btn active">RU</button>
+        <button data-lang="en" class="lang-btn">EN</button>
+        <button data-lang="uz" class="lang-btn">UZ</button>
+      </div>
+      <a href="#courses" class="mobile-nav-url" data-i18n="nav_courses">Курсы</a>
+      <a href="#results" class="mobile-nav-url" data-i18n="nav_results">Результаты</a>
+      <a href="#teachers" class="mobile-nav-url" data-i18n="nav_teachers">Преподаватели</a>
+      <a href="#reviews" class="mobile-nav-url" data-i18n="nav_reviews">Отзывы</a>
+      <a href="#cta" class="btn btn-primary mobile-cta-btn" data-i18n="hero_cta_primary">Записаться на урок</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <!-- Background glow shapes -->
+    <div class="radial-glow glow-1"></div>
+    <div class="radial-glow glow-2"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-eyebrow-wrapper">
+          <span class="hero-eyebrow" data-i18n="hero_eyebrow">Better future starts here</span>
+        </div>
+
+        <h1 class="hero-title" id="hero-title-container">
+          <span class="hero-title-line"><span>ТВОЁ ЛУЧШЕЕ</span></span>
+          <span class="hero-title-line"><span>БУДУЩЕЕ</span></span>
+          <span class="hero-title-line"><span class="text-gradient">НАЧИНАЕТСЯ</span></span>
+          <span class="hero-title-line"><span class="text-gradient">ЗДЕСЬ</span></span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          Курсы английского языка нового поколения. От базовых уровней до подготовки к международному экзамену IELTS. Твои цели — наша система результатов.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#cta" class="btn btn-primary btn-glow" data-i18n="hero_cta_primary">Записаться на пробный урок</a>
+          <a href="#results" class="btn btn-secondary" data-i18n="hero_cta_secondary">Смотреть результаты</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="logo-animation-container">
+          <!-- Outer rotating orbits -->
+          <div class="orbit-ring orbit-1"></div>
+          <div class="orbit-ring orbit-2"></div>
+          <div class="orbit-ring orbit-3"></div>
+
+          <!-- Large center monogram -->
+          <div class="logo-monogram-large">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" id="hero-logo-svg">
+              <defs>
+                <linearGradient id="hero-logo-grad" x1="28" y1="20" x2="68" y2="80" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#C77DE8" />
+                  <stop offset="50%" stop-color="#9B2FC4" />
+                  <stop offset="100%" stop-color="#7C1FA0" />
+                </linearGradient>
+                <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <!-- Outer frame double circles -->
+              <circle cx="50" cy="50" r="46" stroke="#1E0E36" stroke-width="1.8" />
+              <circle cx="50" cy="50" r="42" stroke="#1E0E36" stroke-width="1.0" />
+
+              <!-- Text inside -->
+              <text x="50" y="77" fill="#F6F1FB" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="4.5" text-anchor="middle" letter-spacing="1">BETTER FUTURE</text>
+              <text x="50" y="83" fill="#F6F1FB" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="4.5" text-anchor="middle" letter-spacing="1">STARTS HERE</text>
+
+              <g transform="translate(0, -6)">
+                <!-- Pencil monogram top shape (S upper curve) -->
+                <path id="monogram-top-path" d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="url(#hero-logo-grad)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-effect)" />
+                <!-- Pencil lead facet at the S waist -->
+                <!-- Pencil monogram bottom shape (S lower curve) -->
+                <path id="monogram-bottom-path" d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="url(#hero-logo-grad)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-effect)" />
+                <!-- Pencil-tip nib at the tail -->
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Block -->
+  <section class="stats-section" id="stats">
+    <div class="container stats-container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="1500">0</span><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label" data-i18n="stats_graduates_lbl">Успешных выпускников</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="96">0</span><span class="stat-suffix">%</span>
+          </div>
+          <p class="stat-label" data-i18n="stats_ielts_lbl">Сдача IELTS с 1-го раза</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="18">0</span><span class="stat-suffix"></span>
+          </div>
+          <p class="stat-label" data-i18n="stats_teachers_lbl">Сертифицированных преподавателей</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="10">0</span><span class="stat-suffix"></span>
+          </div>
+          <p class="stat-label" data-i18n="stats_experience_lbl">Лет успешного опыта</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses-section" id="courses">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-eyebrow" data-i18n="courses_eyebrow">Образовательные программы</span>
+        <h2 class="section-title" data-i18n="courses_title">ВЫБЕРИ СВОЙ ПУТЬ</h2>
+        <p class="section-subtitle" data-i18n="courses_subtitle">Мы разработали гибкую систему курсов для любых возрастов и целей обучения английскому языку.</p>
+      </div>
+
+      <div class="courses-grid">
+        <!-- Course 1 -->
+        <div class="course-card reveal-item">
+          <div class="course-glow"></div>
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="course-title" data-i18n="course_1_title">General English</h3>
+          <p class="course-description" data-i18n="course_1_desc">
+            Разговорный и письменный английский для жизни и путешествий. Уверенное развитие всех навыков: Speaking, Listening, Reading и Writing с любого уровня.
+          </p>
+          <div class="course-footer">
+            <span class="course-badge" data-i18n="course_1_badge">Все уровни</span>
+            <a href="#cta" class="course-link">
+              <span data-i18n="course_link_text">Подробнее</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card reveal-item">
+          <div class="course-glow"></div>
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="course-title" data-i18n="course_2_title">IELTS Preparation</h3>
+          <p class="course-description" data-i18n="course_2_desc">
+            Интенсивный курс подготовки к международному экзамену. Разбор структуры экзамена, ловушек, прокачка академического письма и Speaking.
+          </p>
+          <div class="course-footer">
+            <span class="course-badge" data-i18n="course_2_badge">Target: 7.0+</span>
+            <a href="#cta" class="course-link">
+              <span data-i18n="course_link_text">Подробнее</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card reveal-item">
+          <div class="course-glow"></div>
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="course-title" data-i18n="course_3_title">Разговорный клуб</h3>
+          <p class="course-description" data-i18n="course_3_desc">
+            Преодолейте языковой барьер. Увлекательные дискуссии на актуальные темы с носителями языка в небольших мини-группах.
+          </p>
+          <div class="course-footer">
+            <span class="course-badge" data-i18n="course_3_badge">От B1</span>
+            <a href="#cta" class="course-link">
+              <span data-i18n="course_link_text">Подробнее</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card reveal-item">
+          <div class="course-glow"></div>
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 class="course-title" data-i18n="course_4_title">Английский для детей</h3>
+          <p class="course-description" data-i18n="course_4_desc">
+            Интерактивные занятия в игровой форме. Развиваем любовь к языку у школьников, расширяем лексику и помогаем улучшить школьные оценки.
+          </p>
+          <div class="course-footer">
+            <span class="course-badge" data-i18n="course_4_badge">7-14 лет</span>
+            <a href="#cta" class="course-link">
+              <span data-i18n="course_link_text">Подробнее</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course-card reveal-item">
+          <div class="course-glow"></div>
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <h3 class="course-title" data-i18n="course_5_title">Business English</h3>
+          <p class="course-description" data-i18n="course_5_desc">
+            Для специалистов и предпринимателей. Деловая переписка, прохождение собеседований, ведение переговоров и презентация проектов.
+          </p>
+          <div class="course-footer">
+            <span class="course-badge" data-i18n="course_5_badge">От B1</span>
+            <a href="#cta" class="course-link">
+              <span data-i18n="course_link_text">Подробнее</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course-card reveal-item">
+          <div class="course-glow"></div>
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="course-title" data-i18n="course_6_title">Индивидуально</h3>
+          <p class="course-description" data-i18n="course_6_desc">
+            Персональный план занятий один на один с преподавателем. Адаптивный график, фокус на ваших личных целях и максимальное внимание.
+          </p>
+          <div class="course-footer">
+            <span class="course-badge" data-i18n="course_6_badge">Персонально</span>
+            <a href="#cta" class="course-link">
+              <span data-i18n="course_link_text">Подробнее</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Results Section (Contrast Light Section) -->
+  <section class="results-section" id="results">
+    <div class="container">
+      <div class="section-header dark-text reveal-item">
+        <span class="section-eyebrow eyebrow-dark" data-i18n="results_eyebrow">Истории успеха</span>
+        <h2 class="section-title" data-i18n="results_title">РЕЗУЛЬТАТЫ СТУДЕНТОВ</h2>
+        <p class="section-subtitle subtitle-dark" data-i18n="results_subtitle">Посмотрите, как трансформируется знание языка и открываются новые карьерные и учебные возможности.</p>
+      </div>
+
+      <div class="results-grid">
+        <!-- Result 1 -->
+        <div class="result-card reveal-item">
+          <div class="result-header">
+            <div class="avatar-circle avatar-1">АС</div>
+            <div class="student-info">
+              <h3 class="student-name">Алексей С.</h3>
+              <p class="student-course" data-i18n="result_1_course">Курс: IELTS Preparation</p>
+            </div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span><span data-i18n="results_before">Было</span>: <strong class="score-low">5.5</strong></span>
+              <span><span data-i18n="results_after">Стало</span>: <strong class="score-high">7.5</strong></span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill progress-grad-1" data-progress="82"></div>
+            </div>
+            <div class="progress-ticks">
+              <span>4.0</span>
+              <span>5.0</span>
+              <span>6.0</span>
+              <span>7.0</span>
+              <span>8.0</span>
+              <span>9.0</span>
+            </div>
+          </div>
+
+          <blockquote class="student-quote" data-i18n="result_1_quote">
+            «Поступил в Университет Амстердама на специальность Data Science. В Stanford School научили четко структурировать академическое письмо для Writing и перебороли мой страх в Speaking.»
+          </blockquote>
+        </div>
+
+        <!-- Result 2 -->
+        <div class="result-card reveal-item">
+          <div class="result-header">
+            <div class="avatar-circle avatar-2">ЕМ</div>
+            <div class="student-info">
+              <h3 class="student-name">Екатерина М.</h3>
+              <p class="student-course" data-i18n="result_2_course">Курс: General English</p>
+            </div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span><span data-i18n="results_before">Было</span>: <strong class="score-low">A2</strong></span>
+              <span><span data-i18n="results_after">Стало</span>: <strong class="score-high">B2</strong></span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill progress-grad-2" data-progress="68"></div>
+            </div>
+            <div class="progress-ticks">
+              <span>A1</span>
+              <span>A2</span>
+              <span>B1</span>
+              <span>B2</span>
+              <span>C1</span>
+              <span>C2</span>
+            </div>
+          </div>
+
+          <blockquote class="student-quote" data-i18n="result_2_quote">
+            «Спустя полгода интенсивной учебы я смогла уверенно пройти собеседование в международную IT-компанию полностью на английском. Сейчас переехала в Прагу, работаю в мультиязычной команде.»
+          </blockquote>
+        </div>
+
+        <!-- Result 3 -->
+        <div class="result-card reveal-item">
+          <div class="result-header">
+            <div class="avatar-circle avatar-3">ДК</div>
+            <div class="student-info">
+              <h3 class="student-name">Данияр К.</h3>
+              <p class="student-course" data-i18n="result_3_course">Курс: Business English</p>
+            </div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span><span data-i18n="results_before">Было</span>: <strong class="score-low">B1</strong></span>
+              <span><span data-i18n="results_after">Стало</span>: <strong class="score-high">C1</strong></span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill progress-grad-3" data-progress="84"></div>
+            </div>
+            <div class="progress-ticks">
+              <span>A1</span>
+              <span>A2</span>
+              <span>B1</span>
+              <span>B2</span>
+              <span>C1</span>
+              <span>C2</span>
+            </div>
+          </div>
+
+          <blockquote class="student-quote" data-i18n="result_3_quote">
+            «Свободно веду переговоры с зарубежными партнерами. Исчез языковой барьер и синдром самозванца во время презентаций. Инвестиции в курс окупились в первый же месяц после закрытия крупной сделки.»
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teachers Section -->
+  <section class="teachers-section" id="teachers">
+    <div class="radial-glow glow-3"></div>
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-eyebrow" data-i18n="teachers_eyebrow">Наша команда</span>
+        <h2 class="section-title" data-i18n="teachers_title">НАСТАВНИКИ С ОПЫТОМ</h2>
+        <p class="section-subtitle" data-i18n="teachers_subtitle">Занятия ведут профессиональные педагоги и сертифицированные носители языка из Великобритании и США.</p>
+      </div>
+
+      <div class="teachers-grid">
+        <!-- Teacher 1 -->
+        <div class="teacher-card reveal-item">
+          <div class="teacher-image-wrapper">
+            <div class="teacher-placeholder-svg">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="url(#teach-grad-1)"/>
+                <path d="M50 25C40 25 35 32 35 40C35 52 50 62 50 62C50 62 65 52 65 40C65 32 60 25 50 25Z" fill="white" fill-opacity="0.8"/>
+                <circle cx="50" cy="38" r="7" fill="#150826"/>
+                <path d="M25 80C25 68 35 60 50 60C65 60 75 68 75 80" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="teach-grad-1" x1="0" y1="0" x2="100" y2="100">
+                    <stop offset="0%" stop-color="#7C1FA0"/>
+                    <stop offset="100%" stop-color="#E8B84B"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="teacher-badge" data-i18n="teacher_1_badge">Native Speaker</div>
+          </div>
+          <div class="teacher-info-block">
+            <h3 class="teacher-name">Сара Эванс</h3>
+            <p class="teacher-spec" data-i18n="teacher_1_spec">Разговорный английский & IELTS</p>
+            <div class="teacher-meta">
+              <span class="meta-tag" data-i18n="teacher_1_exp">Опыт: 8 лет</span>
+              <span class="meta-tag cert">CELTA, DELTA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teacher 2 -->
+        <div class="teacher-card reveal-item">
+          <div class="teacher-image-wrapper">
+            <div class="teacher-placeholder-svg">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="url(#teach-grad-2)"/>
+                <path d="M50 22C41 22 36 29 36 37C36 49 50 59 50 59C50 59 64 49 64 37C64 29 59 22 50 22Z" fill="white" fill-opacity="0.8"/>
+                <circle cx="50" cy="35" r="7" fill="#150826"/>
+                <path d="M22 78C22 66 33 58 50 58C67 58 78 66 78 78" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="teach-grad-2" x1="0" y1="0" x2="100" y2="100">
+                    <stop offset="0%" stop-color="#9B2FC4"/>
+                    <stop offset="100%" stop-color="#C77DE8"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="teacher-badge" data-i18n="teacher_2_badge">IELTS Expert</div>
+          </div>
+          <div class="teacher-info-block">
+            <h3 class="teacher-name">Арман Маликов</h3>
+            <p class="teacher-spec" data-i18n="teacher_2_spec">Подготовка к IELTS & Grammar</p>
+            <div class="teacher-meta">
+              <span class="meta-tag" data-i18n="teacher_2_exp">Опыт: 6 лет</span>
+              <span class="meta-tag cert">IELTS 8.5, TESOL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teacher 3 -->
+        <div class="teacher-card reveal-item">
+          <div class="teacher-image-wrapper">
+            <div class="teacher-placeholder-svg">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="url(#teach-grad-3)"/>
+                <path d="M50 24C40 24 35 31 35 39C35 51 50 61 50 61C50 61 65 51 65 39C65 31 60 24 50 24Z" fill="white" fill-opacity="0.8"/>
+                <circle cx="50" cy="37" r="7" fill="#150826"/>
+                <path d="M24 79C24 67 34 59 50 59C66 59 76 67 76 79" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="teach-grad-3" x1="0" y1="0" x2="100" y2="100">
+                    <stop offset="0%" stop-color="#7C1FA0"/>
+                    <stop offset="100%" stop-color="#9B2FC4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="teacher-badge" data-i18n="teacher_3_badge">Native Speaker</div>
+          </div>
+          <div class="teacher-info-block">
+            <h3 class="teacher-name">Джессика Кларк</h3>
+            <p class="teacher-spec" data-i18n="teacher_3_spec">Business English & Переговоры</p>
+            <div class="teacher-meta">
+              <span class="meta-tag" data-i18n="teacher_3_exp">Опыт: 7 лет</span>
+              <span class="meta-tag cert">TEFL Certification</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teacher 4 -->
+        <div class="teacher-card reveal-item">
+          <div class="teacher-image-wrapper">
+            <div class="teacher-placeholder-svg">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="url(#teach-grad-4)"/>
+                <path d="M50 25C40 25 35 32 35 40C35 52 50 62 50 62C50 62 65 52 65 40C65 32 60 25 50 25Z" fill="white" fill-opacity="0.8"/>
+                <circle cx="50" cy="38" r="7" fill="#150826"/>
+                <path d="M25 80C25 68 35 60 50 60C65 60 75 68 75 80" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="teach-grad-4" x1="0" y1="0" x2="100" y2="100">
+                    <stop offset="0%" stop-color="#E8B84B"/>
+                    <stop offset="100%" stop-color="#C77DE8"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="teacher-badge" data-i18n="teacher_4_badge">Methodologist</div>
+          </div>
+          <div class="teacher-info-block">
+            <h3 class="teacher-name">Мария Иванова</h3>
+            <p class="teacher-spec" data-i18n="teacher_4_spec">Английский для детей & General</p>
+            <div class="teacher-meta">
+              <span class="meta-tag" data-i18n="teacher_4_exp">Опыт: 5 лет</span>
+              <span class="meta-tag cert">CELTA, TKT 1-3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section (Infinite Horizontal Marquee) -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-eyebrow" data-i18n="reviews_eyebrow">Отзывы</span>
+        <h2 class="section-title" data-i18n="reviews_title">ЧТО ГОВОРЯТ О НАС</h2>
+      </div>
+    </div>
+
+    <!-- Infinite scroll container wrapper -->
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <!-- Card 1 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_1_text">«Отличная школа! Преподаватели просто космос. Подготовился к IELTS за 3 месяца и сдал на 7.5. Всё структурировано и понятно.»</p>
+          <div class="review-author" data-i18n="review_1_author">— Тимур К., студент</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_2_text">«Очень удобный график занятий и крутая атмосфера. Разговорные клубы по выходным помогают быстро снять языковой барьер!»</p>
+          <div class="review-author" data-i18n="review_2_author">— Алина Б., маркетолог</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_3_text">«Мой сын занимается тут уже второй год. Оценки в школе выросли с тройки на твердую пятерку. Педагоги умеют найти подход к ребенку.»</p>
+          <div class="review-author" data-i18n="review_3_author">— Жанна М., мама ученика</div>
+        </div>
+        <!-- Card 4 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_4_text">«Профессиональный подход. Подготовился к важной технической презентации на английском перед заказчиками всего за 2 недели.»</p>
+          <div class="review-author" data-i18n="review_4_author">— Руслан И., Team Lead</div>
+        </div>
+        <!-- Card 5 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_5_text">«Долго не могла начать говорить. После двух недель на курсе General English заговорила! Спасибо огромное Stanford School.»</p>
+          <div class="review-author" data-i18n="review_5_author">— Елена В., дизайнер</div>
+        </div>
+      </div>
+
+      <!-- Duplicate for seamless scroll -->
+      <div class="marquee-track">
+        <!-- Card 1 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_1_text">«Отличная школа! Преподаватели просто космос. Подготовился к IELTS за 3 месяца и сдал на 7.5. Всё структурировано и понятно.»</p>
+          <div class="review-author" data-i18n="review_1_author">— Тимур К., студент</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_2_text">«Очень удобный график занятий и крутая атмосфера. Разговорные клубы по выходным помогают быстро снять языковой барьер!»</p>
+          <div class="review-author" data-i18n="review_2_author">— Алина Б., маркетолог</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_3_text">«Мой сын занимается тут уже второй год. Оценки в школе выросли с тройки на твердую пятерку. Педагоги умеют найти подход к ребенку.»</p>
+          <div class="review-author" data-i18n="review_3_author">— Жанна М., мама ученика</div>
+        </div>
+        <!-- Card 4 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_4_text">«Профессиональный подход. Подготовился к важной технической презентации на английском перед заказчиками всего за 2 недели.»</p>
+          <div class="review-author" data-i18n="review_4_author">— Руслан И., Team Lead</div>
+        </div>
+        <!-- Card 5 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="review_5_text">«Долго не могла начать говорить. После двух недель на курсе General English заговорила! Спасибо огромное Stanford School.»</p>
+          <div class="review-author" data-i18n="review_5_author">— Елена В., дизайнер</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="cta">
+    <div class="radial-glow glow-4"></div>
+    <div class="container cta-container">
+      <div class="cta-card reveal-item">
+        <div class="cta-content">
+          <h2 class="cta-title" data-i18n="cta_title">НАЧНИ СВОЕ БУДУЩЕЕ СЕГОДНЯ</h2>
+          <p class="cta-subtitle" data-i18n="cta_subtitle">Оставь заявку на бесплатное тестирование уровня английского языка и пробный урок в мини-группе.</p>
+
+          <ul class="cta-benefits">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="cta_benefit_1">Бесплатное определение уровня (Grammar + Speaking)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="cta_benefit_2">Индивидуальный разбор ошибок с методистом школы</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="cta_benefit_3">Скидка 15% на первый месяц обучения при оплате в день теста</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cta-form-container">
+          <form id="lead-form" novalidate>
+            <div class="form-group">
+              <label for="user-name" data-i18n="form_name_lbl">Ваше имя</label>
+              <input type="text" id="user-name" name="name" placeholder="Константин" data-i18n-placeholder="form_name_placeholder" required minlength="2">
+              <span class="error-message" data-i18n="form_error_name">Пожалуйста, введите имя (не менее 2 символов)</span>
+            </div>
+
+            <div class="form-group">
+              <label for="user-phone" data-i18n="form_phone_lbl">Номер телефона</label>
+              <input type="tel" id="user-phone" name="phone" placeholder="+7 (___) ___-__-__" data-i18n-placeholder="form_phone_placeholder" required>
+              <span class="error-message" data-i18n="form_error_phone">Пожалуйста, введите корректный номер телефона</span>
+            </div>
+
+            <div class="form-group-checkbox">
+              <input type="checkbox" id="privacy" checked required>
+              <label for="privacy" data-i18n="form_privacy_lbl">Согласен с политикой обработки персональных данных</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+              <span class="btn-text" data-i18n="form_submit_btn">Отправить заявку</span>
+              <div class="btn-spinner"></div>
+            </button>
+          </form>
+
+          <!-- Success Modal Content (hidden by default) -->
+          <div class="form-success-message" id="form-success">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="success-title" data-i18n="success_title">Заявка принята!</h3>
+            <p class="success-text" data-i18n="success_text">Мы свяжемся с вами в течение 15 минут для подтверждения записи на пробный урок.</p>
+            <button type="button" class="btn btn-secondary btn-reset" id="reset-form-btn" data-i18n="success_reset_btn">Отправить еще раз</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo-link">
+          <div class="logo-monogram-small">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.8" stroke-opacity="0.3" />
+              <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="1.0" stroke-opacity="0.2" />
+              <g transform="translate(0, -2)">
+                <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg>
+          </div>
+          <span class="logo-text">Stanford<span class="text-accent">School</span></span>
+        </a>
+        <p class="footer-desc" data-i18n="footer_desc">Качественное обучение английскому языку по международным стандартам. Подготовка к будущему начинается прямо сейчас.</p>
+        <p class="footer-slogan" data-i18n="footer_slogan">Better future starts here</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-title" data-i18n="footer_title_programs">Программы</h4>
+        <ul class="footer-links">
+          <li><a href="#courses" data-i18n="nav_courses">General English</a></li>
+          <li><a href="#courses" data-i18n="nav_courses">Подготовка к IELTS</a></li>
+          <li><a href="#courses" data-i18n="nav_courses">Разговорный клуб</a></li>
+          <li><a href="#courses" data-i18n="nav_courses">Английский для детей</a></li>
+          <li><a href="#courses" data-i18n="nav_courses">Business English</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-title" data-i18n="footer_title_school">Учебный центр</h4>
+        <ul class="footer-links">
+          <li><a href="#results" data-i18n="nav_results">Результаты учеников</a></li>
+          <li><a href="#teachers" data-i18n="nav_teachers">Наши преподаватели</a></li>
+          <li><a href="#reviews" data-i18n="nav_reviews">Отзывы</a></li>
+          <li><a href="#hero" data-i18n="nav_courses">О нас</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-title" data-i18n="footer_title_contacts">Контакты</h4>
+        <ul class="footer-contacts">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <a href="tel:+77771234567">+7 (777) 123-45-67</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <a href="mailto:info@stanford.edu">info@stanfordschool.kz</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span data-i18n="footer_contact_address">просп. Аль-Фараби 77, Алматы, Казахстан</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright" data-i18n="footer_copyright">&copy; 2026 Stanford School. Все права защищены.</p>
+      <div class="footer-legal">
+        <a href="#" data-i18n="footer_legal_privacy">Политика конфиденциальности</a>
+        <a href="#" data-i18n="footer_legal_offer">Публичная оферта</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll CDN -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+  <!-- JavaScript Code -->
+  <script src="script.js"></script>
+</body>
+</html>
