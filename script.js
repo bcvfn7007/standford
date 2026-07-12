@@ -2,6 +2,10 @@
    STANFORD SCHOOL LANDING PAGE LOGIC & TRANSLATIONS
    ---------------------------------------------------- */
 
+// 0. TELEGRAM BOT CONFIGURATION (Fill this to receive form submissions in your Telegram!)
+const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE';
+
 // 1. TRANSLATION DICTIONARY
 const translations = {
   ru: {
@@ -675,12 +679,46 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isValid) {
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
-        
-        setTimeout(() => {
-          submitBtn.classList.remove('loading');
-          leadForm.style.display = 'none';
-          formSuccess.style.display = 'flex';
-        }, 1500);
+
+        const userName = nameInput.value.trim();
+        const userPhone = phoneInput.value.trim();
+
+        // Check if Telegram bot token is configured
+        if (TELEGRAM_BOT_TOKEN !== 'YOUR_BOT_TOKEN_HERE' && TELEGRAM_CHAT_ID !== 'YOUR_CHAT_ID_HERE') {
+          const textMessage = `🔔 *Новая заявка со сайта Stanford School!*\n\n👤 *Имя:* ${userName}\n📞 *Телефон:* ${userPhone}`;
+          
+          fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: textMessage,
+              parse_mode: 'Markdown'
+            })
+          })
+          .then(response => {
+            if (!response.ok) {
+              console.error('Failed to send Telegram message:', response.statusText);
+            }
+          })
+          .catch(error => {
+            console.error('Telegram request error:', error);
+          })
+          .finally(() => {
+            submitBtn.classList.remove('loading');
+            leadForm.style.display = 'none';
+            formSuccess.style.display = 'flex';
+          });
+        } else {
+          // Simulation fallback if not configured yet
+          setTimeout(() => {
+            submitBtn.classList.remove('loading');
+            leadForm.style.display = 'none';
+            formSuccess.style.display = 'flex';
+          }, 1500);
+        }
       }
     });
 
