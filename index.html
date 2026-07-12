@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stanford School — Курсы английского языка | Better future starts here</title>
   <meta name="description" content="Современный учебный центр английского языка Stanford School. Подготовка к IELTS, General English, Business English, разговорные клубы и индивидуальные программы.">
+  <meta name="theme-color" id="theme-meta" content="#0D0416">
+
+  <!-- FOUC Prevention Script -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('theme');
+      var systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      var activeTheme = savedTheme === 'light' || (!savedTheme && systemPrefersLight) ? 'light' : 'dark';
+      if (activeTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%237C1FA0%22/><text y=%2265%22 x=%2228%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2250%22>S</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23C1278C%22/><text y=%2265%22 x=%2228%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2250%22>S</text></svg>">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +40,8 @@
           <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.8" stroke-opacity="0.3" />
           <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="1.0" stroke-opacity="0.2" />
           <g transform="translate(0, -2)">
-            <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="var(--light-pink)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="var(--light-pink)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
           </g>
         </svg>
       </div>
@@ -47,8 +60,8 @@
             <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.8" stroke-opacity="0.3" />
             <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="1.0" stroke-opacity="0.2" />
             <g transform="translate(0, -2)">
-              <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="var(--brand-fuchsia)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="var(--brand-fuchsia)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
             </g>
           </svg>
         </div>
@@ -59,10 +72,28 @@
         <a href="#courses" class="nav-url" data-i18n="nav_courses">Курсы</a>
         <a href="#results" class="nav-url" data-i18n="nav_results">Результаты</a>
         <a href="#teachers" class="nav-url" data-i18n="nav_teachers">Преподаватели</a>
-        <a href="#reviews" class="nav-url" data-i18n="nav_reviews">Отзывы</a>
+        <a href="#certificates" class="nav-url" data-i18n="nav_reviews">Сертификаты</a>
       </nav>
 
       <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Сменить тему" aria-pressed="false">
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
         <!-- Desktop Language Switcher -->
         <div class="lang-switcher">
           <button data-lang="ru" class="lang-btn active">RU</button>
@@ -82,16 +113,35 @@
   <!-- Mobile Navigation Overlay -->
   <div class="mobile-nav-overlay">
     <nav class="mobile-nav-links">
-      <!-- Mobile Language Switcher -->
-      <div class="mobile-lang-switcher">
-        <button data-lang="ru" class="lang-btn active">RU</button>
-        <button data-lang="en" class="lang-btn">EN</button>
-        <button data-lang="uz" class="lang-btn">UZ</button>
+      <!-- Mobile Theme & Language Switchers -->
+      <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 12px;">
+        <button class="theme-toggle-btn" id="mobile-theme-toggle" aria-label="Сменить тему" aria-pressed="false">
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <div class="mobile-lang-switcher" style="margin: 0;">
+          <button data-lang="ru" class="lang-btn active">RU</button>
+          <button data-lang="en" class="lang-btn">EN</button>
+          <button data-lang="uz" class="lang-btn">UZ</button>
+        </div>
       </div>
       <a href="#courses" class="mobile-nav-url" data-i18n="nav_courses">Курсы</a>
       <a href="#results" class="mobile-nav-url" data-i18n="nav_results">Результаты</a>
       <a href="#teachers" class="mobile-nav-url" data-i18n="nav_teachers">Преподаватели</a>
-      <a href="#reviews" class="mobile-nav-url" data-i18n="nav_reviews">Отзывы</a>
+      <a href="#certificates" class="mobile-nav-url" data-i18n="nav_reviews">Сертификаты</a>
       <a href="#cta" class="btn btn-primary mobile-cta-btn" data-i18n="hero_cta_primary">Записаться на урок</a>
     </nav>
   </div>
@@ -137,9 +187,9 @@
             <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" id="hero-logo-svg">
               <defs>
                 <linearGradient id="hero-logo-grad" x1="28" y1="20" x2="68" y2="80" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#C77DE8" />
-                  <stop offset="50%" stop-color="#9B2FC4" />
-                  <stop offset="100%" stop-color="#7C1FA0" />
+                  <stop offset="0%" stop-color="var(--light-pink)" />
+                  <stop offset="50%" stop-color="var(--accent-pink)" />
+                  <stop offset="100%" stop-color="var(--brand-fuchsia)" />
                 </linearGradient>
                 <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
                   <feGaussianBlur stdDeviation="3" result="blur" />
@@ -147,12 +197,12 @@
                 </filter>
               </defs>
               <!-- Outer frame double circles -->
-              <circle cx="50" cy="50" r="46" stroke="#1E0E36" stroke-width="1.8" />
-              <circle cx="50" cy="50" r="42" stroke="#1E0E36" stroke-width="1.0" />
+              <circle cx="50" cy="50" r="46" stroke="var(--border-light)" stroke-width="1.8" />
+              <circle cx="50" cy="50" r="42" stroke="var(--border-light)" stroke-width="1.0" />
 
               <!-- Text inside -->
-              <text x="50" y="77" fill="#F6F1FB" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="4.5" text-anchor="middle" letter-spacing="1">BETTER FUTURE</text>
-              <text x="50" y="83" fill="#F6F1FB" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="4.5" text-anchor="middle" letter-spacing="1">STARTS HERE</text>
+              <text x="50" y="77" fill="var(--text-light)" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="4.5" text-anchor="middle" letter-spacing="1">BETTER FUTURE</text>
+              <text x="50" y="83" fill="var(--text-light)" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="4.5" text-anchor="middle" letter-spacing="1">STARTS HERE</text>
 
               <g transform="translate(0, -6)">
                 <!-- Pencil monogram top shape (S upper curve) -->
@@ -502,8 +552,8 @@
                 <path d="M25 80C25 68 35 60 50 60C65 60 75 68 75 80" stroke="white" stroke-width="4" stroke-linecap="round"/>
                 <defs>
                   <linearGradient id="teach-grad-1" x1="0" y1="0" x2="100" y2="100">
-                    <stop offset="0%" stop-color="#7C1FA0"/>
-                    <stop offset="100%" stop-color="#E8B84B"/>
+                    <stop offset="0%" stop-color="var(--brand-fuchsia)"/>
+                    <stop offset="100%" stop-color="var(--accent-gold)"/>
                   </linearGradient>
                 </defs>
               </svg>
@@ -531,8 +581,8 @@
                 <path d="M22 78C22 66 33 58 50 58C67 58 78 66 78 78" stroke="white" stroke-width="4" stroke-linecap="round"/>
                 <defs>
                   <linearGradient id="teach-grad-2" x1="0" y1="0" x2="100" y2="100">
-                    <stop offset="0%" stop-color="#9B2FC4"/>
-                    <stop offset="100%" stop-color="#C77DE8"/>
+                    <stop offset="0%" stop-color="var(--accent-pink)"/>
+                    <stop offset="100%" stop-color="var(--light-pink)"/>
                   </linearGradient>
                 </defs>
               </svg>
@@ -560,8 +610,8 @@
                 <path d="M24 79C24 67 34 59 50 59C66 59 76 67 76 79" stroke="white" stroke-width="4" stroke-linecap="round"/>
                 <defs>
                   <linearGradient id="teach-grad-3" x1="0" y1="0" x2="100" y2="100">
-                    <stop offset="0%" stop-color="#7C1FA0"/>
-                    <stop offset="100%" stop-color="#9B2FC4"/>
+                    <stop offset="0%" stop-color="var(--brand-fuchsia)"/>
+                    <stop offset="100%" stop-color="var(--accent-pink)"/>
                   </linearGradient>
                 </defs>
               </svg>
@@ -589,8 +639,8 @@
                 <path d="M25 80C25 68 35 60 50 60C65 60 75 68 75 80" stroke="white" stroke-width="4" stroke-linecap="round"/>
                 <defs>
                   <linearGradient id="teach-grad-4" x1="0" y1="0" x2="100" y2="100">
-                    <stop offset="0%" stop-color="#E8B84B"/>
-                    <stop offset="100%" stop-color="#C77DE8"/>
+                    <stop offset="0%" stop-color="var(--accent-gold)"/>
+                    <stop offset="100%" stop-color="var(--light-pink)"/>
                   </linearGradient>
                 </defs>
               </svg>
@@ -610,81 +660,191 @@
     </div>
   </section>
 
-  <!-- Reviews Section (Infinite Horizontal Marquee) -->
-  <section class="reviews-section" id="reviews">
+  <!-- Certificates Section (Replacing Reviews) -->
+  <section class="certificates-section" id="certificates">
     <div class="container">
       <div class="section-header reveal-item">
-        <span class="section-eyebrow" data-i18n="reviews_eyebrow">Отзывы</span>
-        <h2 class="section-title" data-i18n="reviews_title">ЧТО ГОВОРЯТ О НАС</h2>
+        <span class="section-eyebrow" data-i18n="cert_section_eyebrow">Наши успехи</span>
+        <h2 class="section-title" data-i18n="cert_section_title">СЕРТИФИКАТЫ ВЫПУСКНИКОВ</h2>
       </div>
     </div>
 
     <!-- Infinite scroll container wrapper -->
     <div class="marquee-wrapper">
       <div class="marquee-track">
-        <!-- Card 1 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_1_text">«Отличная школа! Преподаватели просто космос. Подготовился к IELTS за 3 месяца и сдал на 7.5. Всё структурировано и понятно.»</p>
-          <div class="review-author" data-i18n="review_1_author">— Тимур К., студент</div>
+        <!-- Certificate 1 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_1_name">Тимур Каримов</div>
+          <div class="cert-details" data-i18n="cert_1_details">Успешно завершил курс интенсивной подготовки к IELTS с результатом 7.5 баллов.</div>
+          <div class="cert-footer">
+            <span class="cert-date">June 2026</span>
+            <span class="cert-id">ID: ST-98241</span>
+          </div>
         </div>
-        <!-- Card 2 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_2_text">«Очень удобный график занятий и крутая атмосфера. Разговорные клубы по выходным помогают быстро снять языковой барьер!»</p>
-          <div class="review-author" data-i18n="review_2_author">— Алина Б., маркетолог</div>
+        <!-- Certificate 2 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_2_name">Алина Борисова</div>
+          <div class="cert-details" data-i18n="cert_2_details">Успешно завершила курс разговорного английского General English на уровне B2.</div>
+          <div class="cert-footer">
+            <span class="cert-date">May 2026</span>
+            <span class="cert-id">ID: ST-98319</span>
+          </div>
         </div>
-        <!-- Card 3 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_3_text">«Мой сын занимается тут уже второй год. Оценки в школе выросли с тройки на твердую пятерку. Педагоги умеют найти подход к ребенку.»</p>
-          <div class="review-author" data-i18n="review_3_author">— Жанна М., мама ученика</div>
+        <!-- Certificate 3 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_3_name">Данияр Кадыров</div>
+          <div class="cert-details" data-i18n="cert_3_details">Успешно завершил продвинутый курс делового английского Business English на уровне C1.</div>
+          <div class="cert-footer">
+            <span class="cert-date">April 2026</span>
+            <span class="cert-id">ID: ST-97984</span>
+          </div>
         </div>
-        <!-- Card 4 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_4_text">«Профессиональный подход. Подготовился к важной технической презентации на английском перед заказчиками всего за 2 недели.»</p>
-          <div class="review-author" data-i18n="review_4_author">— Руслан И., Team Lead</div>
+        <!-- Certificate 4 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_4_name">Руслан Ибрагимов</div>
+          <div class="cert-details" data-i18n="cert_4_details">Успешно завершил специализированный курс подготовки к техническим презентациям.</div>
+          <div class="cert-footer">
+            <span class="cert-date">March 2026</span>
+            <span class="cert-id">ID: ST-97512</span>
+          </div>
         </div>
-        <!-- Card 5 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_5_text">«Долго не могла начать говорить. После двух недель на курсе General English заговорила! Спасибо огромное Stanford School.»</p>
-          <div class="review-author" data-i18n="review_5_author">— Елена В., дизайнер</div>
+        <!-- Certificate 5 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_5_name">Елена Волкова</div>
+          <div class="cert-details" data-i18n="cert_5_details">Успешно преодолела языковой барьер, завершив курс разговорного английского.</div>
+          <div class="cert-footer">
+            <span class="cert-date">February 2026</span>
+            <span class="cert-id">ID: ST-97008</span>
+          </div>
         </div>
       </div>
 
       <!-- Duplicate for seamless scroll -->
       <div class="marquee-track">
-        <!-- Card 1 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_1_text">«Отличная школа! Преподаватели просто космос. Подготовился к IELTS за 3 месяца и сдал на 7.5. Всё структурировано и понятно.»</p>
-          <div class="review-author" data-i18n="review_1_author">— Тимур К., студент</div>
+        <!-- Certificate 1 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_1_name">Тимур Каримов</div>
+          <div class="cert-details" data-i18n="cert_1_details">Успешно завершил курс интенсивной подготовки к IELTS с результатом 7.5 баллов.</div>
+          <div class="cert-footer">
+            <span class="cert-date">June 2026</span>
+            <span class="cert-id">ID: ST-98241</span>
+          </div>
         </div>
-        <!-- Card 2 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_2_text">«Очень удобный график занятий и крутая атмосфера. Разговорные клубы по выходным помогают быстро снять языковой барьер!»</p>
-          <div class="review-author" data-i18n="review_2_author">— Алина Б., маркетолог</div>
+        <!-- Certificate 2 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_2_name">Алина Борисова</div>
+          <div class="cert-details" data-i18n="cert_2_details">Успешно завершила курс разговорного английского General English на уровне B2.</div>
+          <div class="cert-footer">
+            <span class="cert-date">May 2026</span>
+            <span class="cert-id">ID: ST-98319</span>
+          </div>
         </div>
-        <!-- Card 3 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_3_text">«Мой сын занимается тут уже второй год. Оценки в школе выросли с тройки на твердую пятерку. Педагоги умеют найти подход к ребенку.»</p>
-          <div class="review-author" data-i18n="review_3_author">— Жанна М., мама ученика</div>
+        <!-- Certificate 3 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_3_name">Данияр Кадыров</div>
+          <div class="cert-details" data-i18n="cert_3_details">Успешно завершил продвинутый курс делового английского Business English на уровне C1.</div>
+          <div class="cert-footer">
+            <span class="cert-date">April 2026</span>
+            <span class="cert-id">ID: ST-97984</span>
+          </div>
         </div>
-        <!-- Card 4 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_4_text">«Профессиональный подход. Подготовился к важной технической презентации на английском перед заказчиками всего за 2 недели.»</p>
-          <div class="review-author" data-i18n="review_4_author">— Руслан И., Team Lead</div>
+        <!-- Certificate 4 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_4_name">Руслан Ибрагимов</div>
+          <div class="cert-details" data-i18n="cert_4_details">Успешно завершил специализированный курс подготовки к техническим презентациям.</div>
+          <div class="cert-footer">
+            <span class="cert-date">March 2026</span>
+            <span class="cert-id">ID: ST-97512</span>
+          </div>
         </div>
-        <!-- Card 5 -->
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-i18n="review_5_text">«Долго не могла начать говорить. После двух недель на курсе General English заговорила! Спасибо огромное Stanford School.»</p>
-          <div class="review-author" data-i18n="review_5_author">— Елена В., дизайнер</div>
+        <!-- Certificate 5 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <span>STANFORD SCHOOL</span>
+            <svg class="cert-seal" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-title" data-i18n="cert_title">СЕРТИФИКАТ</div>
+          <div class="cert-subtitle" data-i18n="cert_subtitle">ОБ УСПЕШНОМ ОКОНЧАНИИ</div>
+          <div class="cert-name" data-i18n="cert_5_name">Елена Волкова</div>
+          <div class="cert-details" data-i18n="cert_5_details">Успешно преодолела языковой барьер, завершив курс разговорного английского.</div>
+          <div class="cert-footer">
+            <span class="cert-date">February 2026</span>
+            <span class="cert-id">ID: ST-97008</span>
+          </div>
         </div>
       </div>
     </div>
@@ -773,8 +933,8 @@
               <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.8" stroke-opacity="0.3" />
               <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="1.0" stroke-opacity="0.2" />
               <g transform="translate(0, -2)">
-                <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="#C77DE8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M 68,26 C 68,19 59,15 49,15 C 37,15 29,21 29,30 C 29,39 39,43 49,46" stroke="var(--brand-fuchsia)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M 49,46 C 59,49 69,53 69,61 C 69,70 60,75 48,75 C 39,75 31,72 26,66" stroke="var(--brand-fuchsia)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
               </g>
             </svg>
           </div>
@@ -800,7 +960,7 @@
         <ul class="footer-links">
           <li><a href="#results" data-i18n="nav_results">Результаты учеников</a></li>
           <li><a href="#teachers" data-i18n="nav_teachers">Наши преподаватели</a></li>
-          <li><a href="#reviews" data-i18n="nav_reviews">Отзывы</a></li>
+          <li><a href="#certificates" data-i18n="nav_reviews">Сертификаты</a></li>
           <li><a href="#hero" data-i18n="nav_courses">О нас</a></li>
         </ul>
       </div>
@@ -819,7 +979,7 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            <a href="mailto:info@stanford.edu">info@stanfordschool.kz</a>
+            <a href="mailto:info@stanfordschool.kz">info@stanfordschool.kz</a>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

@@ -9,7 +9,7 @@ const translations = {
     nav_courses: "Курсы",
     nav_results: "Результаты",
     nav_teachers: "Преподаватели",
-    nav_reviews: "Отзывы",
+    nav_reviews: "Сертификаты",
     nav_cta: "Записаться",
     
     // Hero Section
@@ -92,20 +92,21 @@ const translations = {
     teacher_4_spec: "Английский для детей & General",
     teacher_4_exp: "Опыт: 5 лет",
     
-    // Reviews Section
-    reviews_eyebrow: "Отзывы",
-    reviews_title: "ЧТО ГОВОРЯТ О НАС",
-    
-    review_1_text: "«Отличная школа! Преподаватели просто космос. Подготовился к IELTS за 3 месяца и сдал на 7.5. Всё структурировано и понятно.»",
-    review_1_author: "— Тимур К., студент",
-    review_2_text: "«Очень удобный график занятий и крутая атмосфера. Разговорные клубы по выходным помогают быстро снять языковой барьер!»",
-    review_2_author: "— Алина Б., маркетолог",
-    review_3_text: "«Мой сын занимается тут уже второй год. Оценки в школе выросли с тройки на твердую пятерку. Педагоги умеют найти подход к ребенку.»",
-    review_3_author: "— Жанна М., мама ученика",
-    review_4_text: "«Профессиональный подход. Подготовился к важной технической презентации на английском перед заказчиками всего за 2 недели.»",
-    review_4_author: "— Руслан И., Team Lead",
-    review_5_text: "«Долго не могла начать говорить. После двух недель на курсе General English заговорила! Спасибо огромное Stanford School.»",
-    review_5_author: "— Елена В., дизайнер",
+    // Certificates Section
+    cert_section_eyebrow: "Наши успехи",
+    cert_section_title: "СЕРТИФИКАТЫ ВЫПУСКНИКОВ",
+    cert_title: "СЕРТИФИКАТ",
+    cert_subtitle: "ОБ УСПЕШНОМ ОКОНЧАНИИ",
+    cert_1_name: "Тимур Каримов",
+    cert_1_details: "Успешно завершил курс интенсивной подготовки к IELTS с результатом 7.5 баллов.",
+    cert_2_name: "Алина Борисова",
+    cert_2_details: "Успешно завершила курс разговорного английского General English на уровне B2.",
+    cert_3_name: "Данияр Кадыров",
+    cert_3_details: "Успешно завершил продвинутый курс делового английского Business English на уровне C1.",
+    cert_4_name: "Руслан Ибрагимов",
+    cert_4_details: "Успешно завершил специализированный курс подготовки к техническим презентациям.",
+    cert_5_name: "Елена Волкова",
+    cert_5_details: "Успешно преодолела языковой барьер, завершив курс разговорного английского.",
     
     // CTA Section
     cta_title: "НАЧНИ СВОЕ БУДУЩЕЕ СЕГОДНЯ",
@@ -143,7 +144,7 @@ const translations = {
     nav_courses: "Courses",
     nav_results: "Results",
     nav_teachers: "Teachers",
-    nav_reviews: "Reviews",
+    nav_reviews: "Certificates",
     nav_cta: "Apply Now",
     
     // Hero Section
@@ -226,20 +227,21 @@ const translations = {
     teacher_4_spec: "Kids English & General Course",
     teacher_4_exp: "Exp: 5 years",
     
-    // Reviews Section
-    reviews_eyebrow: "Reviews",
-    reviews_title: "WHAT OUR STUDENTS SAY",
-    
-    review_1_text: "\"Excellent school! Teachers are absolutely outstanding. Prepared for IELTS in 3 months and scored 7.5. Everything is very structured and clear.\"",
-    review_1_author: "— Timur K., student",
-    review_2_text: "\"Very convenient class schedules and a super welcoming atmosphere. Weekend speaking clubs help break the barrier incredibly fast!\"",
-    review_2_author: "— Alina B., marketer",
-    review_3_text: "\"My son has been studying here for the second year. His school grades improved from average to top scores. Teachers know how to engage kids.\"",
-    review_3_author: "— Zhanna M., parent",
-    review_4_text: "\"A highly professional approach. Successfully prepared for an important technical presentation in English for foreign clients in just 2 weeks.\"",
-    review_4_author: "— Ruslan I., Team Lead",
-    review_5_text: "\"I couldn't start speaking for a long time. After two weeks on the General English course, I finally spoke! Thank you so much, Stanford School.\"",
-    review_5_author: "— Elena V., designer",
+    // Certificates Section
+    cert_section_eyebrow: "Our Successes",
+    cert_section_title: "GRADUATE CERTIFICATES",
+    cert_title: "CERTIFICATE",
+    cert_subtitle: "OF ACHIEVEMENT",
+    cert_1_name: "Timur Karimov",
+    cert_1_details: "Successfully completed the IELTS Intensive Preparation course with a band score of 7.5.",
+    cert_2_name: "Alina Borisova",
+    cert_2_details: "Successfully completed the General English communication course at B2 level.",
+    cert_3_name: "Daniyar Kadyrov",
+    cert_3_details: "Successfully completed the advanced Business English program at C1 level.",
+    cert_4_name: "Ruslan Ibragimov",
+    cert_4_details: "Successfully completed a specialized course for technical presentations in English.",
+    cert_5_name: "Elena Volkova",
+    cert_5_details: "Successfully completed the spoken English communication program.",
     
     // CTA Section
     cta_title: "START YOUR FUTURE TODAY",
@@ -277,7 +279,7 @@ const translations = {
     nav_courses: "Kurslar",
     nav_results: "Natijalar",
     nav_teachers: "O'qituvchilar",
-    nav_reviews: "Fikrlar",
+    nav_reviews: "Sertifikatlar",
     nav_cta: "Yozilish",
     
     // Hero Section
@@ -360,20 +362,21 @@ const translations = {
     teacher_4_spec: "Bolalar uchun & General English",
     teacher_4_exp: "Tajriba: 5 yil",
     
-    // Reviews Section
-    reviews_eyebrow: "Fikrlar",
-    reviews_title: "TALABALAR BIZ HAQIMIZDA",
-    
-    review_1_text: "\"Ajoyib maktab! O'qituvchilar juda zo'r. 3 oy davomida IELTSga tayyorlandim va 7.5 ball oldim. Hamma narsa juda tizimli va tushunarli.\"",
-    review_1_author: "— Timur K., talaba",
-    review_2_text: "\"Dars jadvali juda qulay va ajoyib muhit yaratilgan. Dam olish kunlaridagi so'zlashuv klublari til to'sig'ini tezda yengishga yordam beradi!\"",
-    review_2_author: "— Alina B., marketolog",
-    review_3_text: "\"O'g'lim bu yerda ikkinchi yildan beri o'qimoqda. Maktabdagi baholari ancha ko'tarildi. O'qituvchilar bolalarga yondashuvni bilishadi.\"",
-    review_3_author: "— Janna M., o'quvchining onasi",
-    review_4_text: "\"Yuqori professional yondashuv. Chet ellik mijozlar uchun muhim texnik taqdimotga atigi 2 hafta ichida ingliz tilida tayyorlandim.\"",
-    review_4_author: "— Ruslan I., Team Lead",
-    review_5_text: "\"Uzoq vaqt gapira olmay yurdim. General English kursidagi ikki haftadan so'ng nihoyat gapira boshladim! Katta rahmat, Stanford School.\"",
-    review_5_author: "— Elena V., dizayner",
+    // Certificates Section
+    cert_section_eyebrow: "Bizning yutuqlar",
+    cert_section_title: "BITIRUVCHILAR SERTIFIKATLARI",
+    cert_title: "SERTIFIKAT",
+    cert_subtitle: "MUVAFFAQIYATLI YAKUNLASH",
+    cert_1_name: "Temur Karimov",
+    cert_1_details: "IELTS Intensive Preparation kursini 7.5 ball natija bilan muvaffaqiyatli yakunladi.",
+    cert_2_name: "Alina Borisova",
+    cert_2_details: "General English so'zlashuv kursini B2 darajasida muvaffaqiyatli yakunladi.",
+    cert_3_name: "Doniyor Qodirov",
+    cert_3_details: "Biznes English dasturini C1 darajasida muvaffaqiyatli yakunladi.",
+    cert_4_name: "Ruslan Ibragimov",
+    cert_4_details: "Ingliz tilida texnik taqdimotlar bo'yicha maxsus kursni muvaffaqiyatli yakunladi.",
+    cert_5_name: "Elena Volkova",
+    cert_5_details: "General English so'zlashuv dasturini muvaffaqiyatli yakunladi.",
     
     // CTA Section
     cta_title: "KELAJAGINGIZNI BUGUNDAN BOSHLANG",
@@ -410,6 +413,44 @@ const translations = {
 
 document.addEventListener('DOMContentLoaded', () => {
   
+  // 1.5. THEME INITIALIZATION & SWITCHER
+  function applyTheme(theme) {
+    document.documentElement.classList.toggle('light-theme', theme === 'light');
+    localStorage.setItem('theme', theme);
+    
+    // Update theme-toggle buttons aria-pressed
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+    themeToggleBtns.forEach(btn => {
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    });
+    
+    // Update theme meta color tag
+    const metaThemeColor = document.getElementById('theme-meta');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', theme === 'light' ? '#F6F1FB' : '#0D0416');
+    }
+    
+    // Recalculate ScrollTrigger parameters on theme transitions
+    if (typeof ScrollTrigger !== 'undefined') {
+      ScrollTrigger.refresh();
+    }
+  }
+
+  let currentTheme = localStorage.getItem('theme');
+  if (!currentTheme) {
+    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    currentTheme = systemPrefersLight ? 'light' : 'dark';
+  }
+  applyTheme(currentTheme);
+
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isLightNow = document.documentElement.classList.contains('light-theme');
+      applyTheme(isLightNow ? 'dark' : 'light');
+    });
+  });
+
   // 2. LANGUAGE INITIALIZATION
   let currentLang = localStorage.getItem('selectedLanguage') || 'ru';
   if (!translations[currentLang]) currentLang = 'ru';
