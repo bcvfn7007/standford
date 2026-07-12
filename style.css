@@ -593,10 +593,6 @@ img, svg {
   margin-bottom: 16px;
 }
 
-.eyebrow-dark {
-  color: var(--brand-fuchsia);
-}
-
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
@@ -610,14 +606,6 @@ img, svg {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text-muted-light);
-}
-
-.subtitle-dark {
-  color: var(--text-muted-dark);
-}
-
-.dark-text {
-  color: var(--text-dark);
 }
 
 /* Courses Section */
