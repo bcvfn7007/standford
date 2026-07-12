@@ -1498,144 +1498,6 @@ img, svg {
   transform: translateY(40px);
 }
 
-/* ----------------------------------------------------
-   RESPONSIVE DESIGN (BREAKPOINTS)
-   ---------------------------------------------------- */
-
-@media (max-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-}
-
-@media (max-width: 900px) {
-  /* Header */
-  .desktop-nav,
-  #theme-toggle,
-  .btn-nav,
-  .lang-switcher {
-    display: none !important;
-  }
-  
-  .mobile-menu-toggle {
-    display: flex;
-  }
-  
-  /* Hero */
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-  
-  .hero-subtitle {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .hero-buttons {
-    justify-content: center;
-  }
-  
-  /* Stats */
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-  
-  /* Courses */
-  .courses-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  /* Results */
-  .results-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  /* Teachers */
-  .teachers-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  /* CTA */
-  .cta-card {
-    grid-template-columns: 1fr;
-    padding: 40px;
-    gap: 40px;
-  }
-}
-
-@media (max-width: 640px) {
-  html {
-    font-size: 15px;
-  }
-  
-  .container {
-    padding: 0 20px;
-  }
-  
-  /* Hero */
-  .hero-section {
-    padding: 110px 0 60px 0;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-  }
-  
-  .btn {
-    width: 100%;
-  }
-  
-  /* Stats */
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  /* Courses */
-  .courses-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  /* Teachers */
-  .teachers-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  /* CTA */
-  .cta-card {
-    padding: 30px 20px;
-  }
-  
-  .cta-form-container {
-    padding: 24px;
-  }
-  
-  /* Footer */
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-  }
-  
-  .footer-legal {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
 /* Interactive Mobile Nav Hamburger Transformation */
 .mobile-menu-toggle.active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
@@ -1836,4 +1698,142 @@ body::after {
   70% { transform: translate(0%, 15%); }
   80% { transform: translate(3%, 35%); }
   90% { transform: translate(-10%, 10%); }
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE DESIGN (BREAKPOINTS AT THE VERY BOTTOM)
+   ---------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Header */
+  .desktop-nav,
+  #theme-toggle,
+  .btn-nav,
+  .lang-switcher {
+    display: none !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  /* Hero */
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  /* Courses */
+  .courses-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Results */
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  /* Teachers */
+  .teachers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* CTA */
+  .cta-card {
+    grid-template-columns: 1fr;
+    padding: 40px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+  
+  /* Hero */
+  .hero-section {
+    padding: 110px 0 60px 0;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  /* Courses */
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Teachers */
+  .teachers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* CTA */
+  .cta-card {
+    padding: 30px 20px;
+  }
+  
+  .cta-form-container {
+    padding: 24px;
+  }
+  
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
