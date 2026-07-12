@@ -749,8 +749,8 @@ img, svg {
 
 /* Student Results Section (Light Contrast Block) */
 .results-section {
-  background-color: var(--bg-light);
-  color: var(--text-dark);
+  background-color: var(--bg-card-alt-dark);
+  color: var(--text-light);
   padding: 100px 0;
   position: relative;
 }
@@ -762,8 +762,8 @@ img, svg {
 }
 
 .result-card {
-  background-color: #ffffff;
-  border: 1px solid var(--border-dark);
+  background-color: var(--bg-card-dark);
+  border: 1px solid var(--border-light);
   border-radius: 20px;
   padding: 36px;
   box-shadow: 0 15px 35px rgba(13, 4, 22, 0.03);
@@ -811,7 +811,7 @@ img, svg {
 
 .student-course {
   font-size: 0.85rem;
-  color: var(--text-muted-dark);
+  color: var(--text-muted-light);
   font-weight: 500;
 }
 
@@ -829,7 +829,7 @@ img, svg {
 }
 
 .score-low {
-  color: #8f829c;
+  color: var(--text-muted-light);
 }
 
 .score-high {
@@ -839,7 +839,7 @@ img, svg {
 
 .progress-bar-track {
   height: 8px;
-  background-color: rgba(13, 4, 22, 0.05);
+  background-color: var(--border-light);
   border-radius: 50px;
   overflow: hidden;
   position: relative;
@@ -860,14 +860,15 @@ img, svg {
   display: flex;
   justify-content: space-between;
   font-size: 0.72rem;
-  color: var(--text-muted-dark);
+  color: var(--text-muted-light);
   font-family: var(--font-mono);
 }
 
 .student-quote {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: rgba(13, 4, 22, 0.8);
+  color: var(--text-light);
+  opacity: 0.85;
   font-style: italic;
   position: relative;
   flex-grow: 1;
