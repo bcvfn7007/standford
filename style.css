@@ -1511,8 +1511,11 @@ img, svg {
 
 @media (max-width: 900px) {
   /* Header */
-  .desktop-nav {
-    display: none;
+  .desktop-nav,
+  #theme-toggle,
+  .btn-nav,
+  .lang-switcher {
+    display: none !important;
   }
   
   .mobile-menu-toggle {
@@ -1688,11 +1691,7 @@ img, svg {
   margin-top: 10px;
 }
 
-@media (max-width: 900px) {
-  .lang-switcher {
-    display: none;
-  }
-}
+
 
 /* Cinematic Preloader curtain */
 .preloader {
