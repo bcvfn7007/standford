@@ -21,6 +21,17 @@
   --text-dark: #0D0416;
   --text-muted-dark: rgba(13, 4, 22, 0.65);
   --border-dark: rgba(13, 4, 22, 0.08);
+
+  /* Theme-aware layout backgrounds and tokens */
+  --bg-stats: rgba(21, 8, 38, 0.4);
+  --bg-form: rgba(13, 4, 22, 0.35);
+  --border-form: rgba(246, 241, 251, 0.05);
+  --bg-input: rgba(246, 241, 251, 0.03);
+  --border-input: rgba(246, 241, 251, 0.08);
+  --text-input-placeholder: rgba(246, 241, 251, 0.3);
+  --bg-badge: rgba(13, 4, 22, 0.6);
+  --border-badge: rgba(246, 241, 251, 0.15);
+  --text-badge: #F6F1FB;
   
   /* Fonts */
   --font-display: 'Unbounded', sans-serif;
@@ -47,6 +58,17 @@
   --text-dark: #F6F1FB;
   --text-muted-dark: rgba(246, 241, 251, 0.62);
   --border-dark: rgba(246, 241, 251, 0.08);
+
+  /* Light Theme overrides for layout components */
+  --bg-stats: rgba(239, 232, 247, 0.6); /* Premium soft light-violet tint */
+  --bg-form: rgba(255, 255, 255, 0.7); /* Luxurious frosted glass card */
+  --border-form: rgba(13, 4, 22, 0.08);
+  --bg-input: #FFFFFF;
+  --border-input: rgba(13, 4, 22, 0.12);
+  --text-input-placeholder: rgba(13, 4, 22, 0.4);
+  --bg-badge: rgba(255, 255, 255, 0.75); /* Frosted light badge */
+  --border-badge: rgba(13, 4, 22, 0.1);
+  --text-badge: #0D0416;
 }
 
 /* Base Styles & Resets */
@@ -524,7 +546,7 @@ img, svg {
   padding: 60px 0;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
-  background-color: rgba(21, 8, 38, 0.4);
+  background-color: var(--bg-stats);
 }
 
 .stats-grid {
@@ -882,7 +904,7 @@ img, svg {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
-  background-color: #120721;
+  background-color: var(--bg-card-alt-dark);
 }
 
 .teacher-placeholder-svg {
@@ -901,13 +923,13 @@ img, svg {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
-  background-color: rgba(13, 4, 22, 0.6);
+  background-color: var(--bg-badge);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  color: var(--text-light);
+  color: var(--text-badge);
   padding: 4px 12px;
   border-radius: 50px;
-  border: 1px solid rgba(246, 241, 251, 0.15);
+  border: 1px solid var(--border-badge);
 }
 
 .teacher-info-block {
@@ -1185,8 +1207,8 @@ img, svg {
 
 /* Lead Form Styling */
 .cta-form-container {
-  background-color: rgba(13, 4, 22, 0.35);
-  border: 1px solid rgba(246, 241, 251, 0.05);
+  background-color: var(--bg-form);
+  border: 1px solid var(--border-form);
   border-radius: 20px;
   padding: 40px;
   backdrop-filter: blur(8px);
@@ -1212,11 +1234,26 @@ img, svg {
   letter-spacing: 1px;
 }
 
+.form-group input {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 14px 18px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-input);
+  border-radius: 12px;
+  color: var(--text-light);
+  transition: var(--transition-fast);
+}
+
+.form-group input::placeholder {
+  color: var(--text-input-placeholder);
+}
+
 .form-group input:focus {
   outline: none;
-  border-color: var(--light-pink);
-  background-color: rgba(246, 241, 251, 0.05);
-  box-shadow: 0 0 10px rgba(244, 143, 177, 0.15);
+  border-color: var(--brand-fuchsia);
+  background-color: var(--bg-input);
+  box-shadow: 0 0 10px rgba(193, 39, 140, 0.15);
 }
 
 .form-group.error input {
