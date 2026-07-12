@@ -456,8 +456,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 2. LANGUAGE INITIALIZATION
-  let currentLang = localStorage.getItem('selectedLanguage') || 'ru';
-  if (!translations[currentLang]) currentLang = 'ru';
+  let currentLang = localStorage.getItem('selectedLanguage') || 'en';
+  if (!translations[currentLang]) currentLang = 'en';
   
   setLanguage(currentLang);
   
